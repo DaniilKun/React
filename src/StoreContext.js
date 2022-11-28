@@ -1,0 +1,1 @@
+const StoreContext =React.createContext(null)
