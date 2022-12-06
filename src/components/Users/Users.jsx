@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./users.module.css";
 
 let Users = (props) => {
   return (
@@ -7,20 +8,23 @@ let Users = (props) => {
         <div key={u.id}>
           <span>
             <div>
-                <img />
+                <img src={u.photoUrl} className={styles.userPhoto}/>
             </div>
             <div>
-                <button>Follow </button>
+            {u.followed ? 
+            <button onClick={()=>{props.unfollow(u.id)}}>Unfollow </button>
+             : <button onClick={()=>{props.follow(u.id)}}>Follow </button>}
+                
             </div>
           </span>
           <span>
             <span>
-                <div></div>
-                <div></div>
+            <div>{u.fullName}</div>
+                <div>{u.status}</div>
             </span>
             <span>
-                <div>{u.fullName}</div>
-                <div></div>
+                <div>{u.location.country}</div>
+                <div>{u.location.city}</div>
             </span>
           </span>
         </div>

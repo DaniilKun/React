@@ -4,27 +4,7 @@ const SET_USERS = "SET_USERS";
 
 let initialState = {
   users: [
-    // {
-    //   id: 1,
-    //   followed: false,
-    //   fullName: "Daniil",
-    //   status: "i am a boss1",
-    //   location: { city: "Samara", country: "Russia" },
-    // },
-    // {
-    //   id: 2,
-    //   followed: true,
-    //   fullName: "Sasha",
-    //   status: "i am a boss2",
-    //   location: { city: "Kinel", country: "Russia" },
-    // },
-    // {
-    //   id: 3,
-    //   followed: false,
-    //   fullName: "Andrey",
-    //   status: "i am a boss3",
-    //   location: { city: "Moscow", country: "Russia" },
-    // },
+    
   ],
 };
 
