@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./users.module.css";
-import  axios from "axios";
+import axios from "axios";
+import userPhoto from '../../assets/img/user.png'
 
 let Users = (props) => {
 
     if (props.users.length === 0) {
-
-      axios.get('https://social-network.samuraijs.com/api/1.0/users') .then(response => {
+      axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
         props.setUsers(response.data.items)
       })
 
@@ -18,7 +18,7 @@ let Users = (props) => {
         <div key={u.id}>
           <span>
             <div>
-              <img src={u.photoUrl} className={styles.userPhoto} />
+              <img src={u.photos.small != null ? u.photo.small : userPhoto} className={styles.userPhoto} />
             </div>
             <div>
               {u.followed ? (
