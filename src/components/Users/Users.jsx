@@ -15,8 +15,8 @@ let Users = (props) => {
 
   return (
     <div>
-      {props.users.map((u) => (
-        <div key={u.id}>
+    <button onClick={getUsers}>Get users</button>
+      {props.users.map((u) => ( <div key={u.id}>
           <span>
             <div>
               <img src={u.photos.small != null ? u.photo.small : userPhoto} className={styles.userPhoto} />
